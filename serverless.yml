@@ -6,10 +6,14 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: python3.9
+  tags:
+    Project: "https://www.github.com/sudhanshu-chauhan/mionir"
+    Environment: "prod"
+    Revision: "prod"
 
 functions:
   hello:
-    handler: handler.hello
+    handler: src/handler.hello
     events:
       - httpApi:
           path: /
